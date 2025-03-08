@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://d0lmbh23sfivw" path="res://app/models/floor/material.tres" id="2_4cn6l"]
 [ext_resource type="Shader" uid="uid://8p150alaobr2" path="res://shaders/ursc/spatial/sprite/sprite_shaded.gdshader" id="3_b50hc"]
 [ext_resource type="Texture2D" uid="uid://0mmub3qqragy" path="res://app/models/floor/child.png" id="4_6x225"]
-[ext_resource type="FontFile" uid="uid://bsgmup0j2l6a4" path="res://theme/font.ttf" id="5_8iwl8"]
+[ext_resource type="FontFile" uid="uid://bsgmup0j2l6a4" path="res://app/theme/font.ttf" id="5_8iwl8"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_d3c41"]
 

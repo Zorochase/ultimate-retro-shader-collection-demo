@@ -1,9 +1,9 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://cej5f3jn7rhqf"]
 
-[ext_resource type="FontFile" uid="uid://bsgmup0j2l6a4" path="res://theme/font.ttf" id="1_8yer8"]
-[ext_resource type="StyleBox" uid="uid://yrkv8y1pimhn" path="res://theme/style_boxes/normal_style_box.tres" id="1_kc4h6"]
-[ext_resource type="StyleBox" uid="uid://bxfe45wtah4qo" path="res://theme/style_boxes/focus_style_box.tres" id="2_s3hs7"]
-[ext_resource type="StyleBox" uid="uid://cnnrmkb310wgf" path="res://theme/style_boxes/hover_style_box.tres" id="3_pcxly"]
+[ext_resource type="FontFile" uid="uid://bsgmup0j2l6a4" path="res://app/theme/font.ttf" id="1_8yer8"]
+[ext_resource type="StyleBox" uid="uid://yrkv8y1pimhn" path="res://app/theme/style_boxes/normal_style_box.tres" id="1_kc4h6"]
+[ext_resource type="StyleBox" uid="uid://bxfe45wtah4qo" path="res://app/theme/style_boxes/focus_style_box.tres" id="2_s3hs7"]
+[ext_resource type="StyleBox" uid="uid://cnnrmkb310wgf" path="res://app/theme/style_boxes/hover_style_box.tres" id="3_pcxly"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_beno8"]
 
