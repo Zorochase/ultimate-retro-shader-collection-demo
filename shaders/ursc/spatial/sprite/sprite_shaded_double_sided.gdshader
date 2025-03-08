@@ -1,6 +1,6 @@
 shader_type spatial;
 
-#define UNSHADED
+#define CULL_MODE cull_disabled
 #define ALPHA_SCISSOR
 #define BILLBOARD
 
