@@ -39,6 +39,7 @@ var _play_music: bool:
 
 	set(value):
 		_play_music = value
+		@warning_ignore("standalone_ternary")
 		_music.play() if _play_music else _music.stop()
 
 
