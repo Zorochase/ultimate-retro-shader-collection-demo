@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://dsfuy751padsu"]
 
 [ext_resource type="Script" uid="uid://cygv81f40v4w5" path="res://app/app.gd" id="1_gu4b0"]
-[ext_resource type="AudioStream" uid="uid://dofxcqjeghcx3" path="res://app/music.ogg" id="2_crgi3"]
+[ext_resource type="AudioStream" uid="uid://b7lc3x3s7p11i" path="res://app/flowerhead_dark_wind.ogg" id="2_ipo28"]
 [ext_resource type="Shader" uid="uid://nj0m544gq80j" path="res://shaders/ursc/canvas_item/dithering.gdshader" id="2_yu7j4"]
 [ext_resource type="Texture2D" uid="uid://b7hkgafa6ytrn" path="res://app/dithering_pattern.png" id="3_6fur4"]
 [ext_resource type="PackedScene" uid="uid://cidinjynknws6" path="res://app/models/floor/floor.tscn" id="5_dbvra"]
@@ -71,7 +71,7 @@ _data = {
 script = ExtResource("1_gu4b0")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_crgi3")
+stream = ExtResource("2_ipo28")
 
 [node name="SpatialLayer" type="SubViewportContainer" parent="."]
 texture_filter = 1
