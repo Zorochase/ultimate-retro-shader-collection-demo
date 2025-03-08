@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1w0fvkt5acam"]
 
 [ext_resource type="Material" uid="uid://dd3oqk48ql48n" path="res://app/models/sprite/material.tres" id="1_sesdo"]
-[ext_resource type="Script" path="res://app/animated_sample.gd" id="2_x2dp5"]
+[ext_resource type="Script" uid="uid://utv81xd2dg7t" path="res://app/animated_sample.gd" id="2_x2dp5"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_lars6"]
 size = Vector2(1.5, 1.5)
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gw0kq"]
 _data = {
-"RESET": SubResource("Animation_7rpus"),
-"animation": SubResource("Animation_0quga")
+&"RESET": SubResource("Animation_7rpus"),
+&"animation": SubResource("Animation_0quga")
 }
 
 [node name="Sprite" type="MeshInstance3D"]

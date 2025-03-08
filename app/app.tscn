@@ -1,19 +1,19 @@
 [gd_scene load_steps=22 format=3 uid="uid://dsfuy751padsu"]
 
-[ext_resource type="Script" path="res://app/app.gd" id="1_gu4b0"]
+[ext_resource type="Script" uid="uid://cygv81f40v4w5" path="res://app/app.gd" id="1_gu4b0"]
 [ext_resource type="AudioStream" uid="uid://dofxcqjeghcx3" path="res://app/music.ogg" id="2_crgi3"]
-[ext_resource type="Shader" path="res://shaders/ursc/canvas_item/dithering.gdshader" id="2_yu7j4"]
+[ext_resource type="Shader" uid="uid://nj0m544gq80j" path="res://shaders/ursc/canvas_item/dithering.gdshader" id="2_yu7j4"]
 [ext_resource type="Texture2D" uid="uid://b7hkgafa6ytrn" path="res://app/dithering_pattern.png" id="3_6fur4"]
 [ext_resource type="PackedScene" uid="uid://cidinjynknws6" path="res://app/models/floor/floor.tscn" id="5_dbvra"]
-[ext_resource type="Script" path="res://app/free_camera.gd" id="5_gwqpl"]
-[ext_resource type="Script" path="res://app/orbit_camera.gd" id="6_g7xg1"]
+[ext_resource type="Script" uid="uid://e0stpk3vpuo2" path="res://app/free_camera.gd" id="5_gwqpl"]
+[ext_resource type="Script" uid="uid://dau01e32s41pg" path="res://app/orbit_camera.gd" id="6_g7xg1"]
 [ext_resource type="PackedScene" uid="uid://ckf2xqt5xeowh" path="res://app/models/cube/cube.tscn" id="6_s7kmq"]
-[ext_resource type="Shader" path="res://shaders/ursc/canvas_item/fade.gdshader" id="6_wv37t"]
+[ext_resource type="Shader" uid="uid://hjbmoinllyqf" path="res://shaders/ursc/canvas_item/fade.gdshader" id="6_wv37t"]
 [ext_resource type="PackedScene" uid="uid://bd30icixtw6ri" path="res://app/models/metallic_cube/metallic_cube.tscn" id="7_5fvgl"]
-[ext_resource type="Script" path="res://app/fade_overlay.gd" id="7_yqsgr"]
+[ext_resource type="Script" uid="uid://bbhetyun4s6ge" path="res://app/fade_overlay.gd" id="7_yqsgr"]
 [ext_resource type="PackedScene" uid="uid://dmi53u3776i8f" path="res://app/models/chocolate/chocolate.tscn" id="8_lb2v6"]
 [ext_resource type="PackedScene" uid="uid://dnyxuo4xxbsil" path="res://app/models/gem/gem.tscn" id="9_sdmkk"]
-[ext_resource type="Script" path="res://app/shinies.gd" id="10_gmhn8"]
+[ext_resource type="Script" uid="uid://dwbvyuyymiq7g" path="res://app/shinies.gd" id="10_gmhn8"]
 [ext_resource type="PackedScene" uid="uid://b1w0fvkt5acam" path="res://app/models/sprite/sprite.tscn" id="10_oofgw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_264vd"]
@@ -63,8 +63,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2sb81"]
 _data = {
-"RESET": SubResource("Animation_pig3h"),
-"fade": SubResource("Animation_mqbsh")
+&"RESET": SubResource("Animation_pig3h"),
+&"fade": SubResource("Animation_mqbsh")
 }
 
 [node name="App" type="Node"]
@@ -330,7 +330,7 @@ metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FadeOverlay"]
 libraries = {
-"": SubResource("AnimationLibrary_2sb81")
+&"": SubResource("AnimationLibrary_2sb81")
 }
 
 [connection signal="toggled" from="PlanarLayer/SubViewport/Ui/VBoxContainer/Menu/Fullscreen" to="." method="_on_fullscreen_button_toggled"]

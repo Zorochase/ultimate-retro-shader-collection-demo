@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://b6tdo6d514m8l" path="res://app/models/floor/floor.obj" id="1_7ab5p"]
 [ext_resource type="Material" uid="uid://d0lmbh23sfivw" path="res://app/models/floor/material.tres" id="2_4cn6l"]
-[ext_resource type="Shader" path="res://shaders/ursc/spatial/sprite.gdshader" id="3_b50hc"]
+[ext_resource type="Shader" uid="uid://8p150alaobr2" path="res://shaders/ursc/spatial/sprite.gdshader" id="3_b50hc"]
 [ext_resource type="Texture2D" uid="uid://0mmub3qqragy" path="res://app/models/floor/child.png" id="4_6x225"]
 [ext_resource type="FontFile" uid="uid://bsgmup0j2l6a4" path="res://theme/font.ttf" id="5_8iwl8"]
 
@@ -12,6 +12,7 @@
 render_priority = 0
 shader = ExtResource("3_b50hc")
 shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/albedo_texture = ExtResource("4_6x225")
 shader_parameter/alpha_scissor = 0.1
 shader_parameter/texture_lod_halve_distance_override = 8.0
 shader_parameter/uv_offset = Vector2(0, 0)
@@ -20,7 +21,6 @@ shader_parameter/uv_scroll_speed = Vector2(0, 0)
 shader_parameter/billboard_mode = 1
 shader_parameter/use_transform_scale = true
 shader_parameter/cull_distance_override = 0.0
-shader_parameter/albedo_texture = ExtResource("4_6x225")
 
 [sub_resource type="GDScript" id="GDScript_38ovj"]
 resource_name = "child"

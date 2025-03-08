@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://c4s03uxdc1hgm" path="res://app/models/gem/gem.obj" id="1_6028s"]
 [ext_resource type="Material" uid="uid://deei65q1p505h" path="res://app/models/gem/material.tres" id="2_s1v5v"]
-[ext_resource type="Script" path="res://app/float_and_spin.gd" id="3_mty84"]
+[ext_resource type="Script" uid="uid://bgmecqapurpnr" path="res://app/float_and_spin.gd" id="3_mty84"]
 
 [node name="Gem" type="MeshInstance3D"]
 transform = Transform3D(1.00001, 0, 0, 0, 0.707109, -0.707109, 0, 0.707109, 0.707109, 0, 1, 0)
