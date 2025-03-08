@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://cja0b0cf3bwxj"]
+
+[ext_resource type="Material" uid="uid://2xeb06dniabn" path="res://app/models/animated_sprite/material.tres" id="1_rlqku"]
+[ext_resource type="Texture2D" uid="uid://c8lwqdgakhmym" path="res://app/models/animated_sprite/texture.png" id="2_id1nd"]
+[ext_resource type="Script" uid="uid://bjc4erpo4dl1g" path="res://app/models/animated_sprite/animated_sprite.gd" id="3_id1nd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtnc2"]
+atlas = ExtResource("2_id1nd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxbkh"]
+atlas = ExtResource("2_id1nd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evhx0"]
+atlas = ExtResource("2_id1nd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cd7au"]
+atlas = ExtResource("2_id1nd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17jfq"]
+atlas = ExtResource("2_id1nd")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp4rq"]
+atlas = ExtResource("2_id1nd")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqtet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtnc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxbkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evhx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cd7au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17jfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp4rq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite" type="AnimatedSprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = ExtResource("1_rlqku")
+pixel_size = 0.02
+billboard = 1
+double_sided = false
+sprite_frames = SubResource("SpriteFrames_nqtet")
+autoplay = "default"
+frame_progress = 0.416604
+script = ExtResource("3_id1nd")

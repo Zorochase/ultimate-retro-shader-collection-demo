@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dmi53u3776i8f" path="res://app/models/chocolate/chocolate.tscn" id="8_lb2v6"]
 [ext_resource type="PackedScene" uid="uid://dnyxuo4xxbsil" path="res://app/models/gem/gem.tscn" id="9_sdmkk"]
 [ext_resource type="Script" uid="uid://dwbvyuyymiq7g" path="res://app/shinies.gd" id="10_gmhn8"]
-[ext_resource type="PackedScene" uid="uid://b1w0fvkt5acam" path="res://app/models/sprite/sprite.tscn" id="10_oofgw"]
+[ext_resource type="PackedScene" uid="uid://cja0b0cf3bwxj" path="res://app/models/animated_sprite/animated_sprite.tscn" id="14_d2u4y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_264vd"]
 shader = ExtResource("2_yu7j4")
@@ -140,7 +140,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
 [node name="Gem" parent="SpatialLayer/SubViewport/World/Samples/Shinies" instance=ExtResource("9_sdmkk")]
 transform = Transform3D(1.00001, 0, 0, 0, 0.707109, -0.707109, 0, 0.707109, 0.707109, 1, 1, 0)
 
-[node name="Sprite" parent="SpatialLayer/SubViewport/World/Samples" instance=ExtResource("10_oofgw")]
+[node name="AnimatedSprite" parent="SpatialLayer/SubViewport/World/Samples" instance=ExtResource("14_d2u4y")]
 visible = false
 
 [node name="PlanarLayer" type="SubViewportContainer" parent="."]

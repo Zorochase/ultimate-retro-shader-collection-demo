@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://2xeb06dniabn"]
+
+[ext_resource type="Shader" uid="uid://dpbe0nlu0yjau" path="res://shaders/ursc/spatial/sprite/sprite_unshaded.gdshader" id="1_fnspp"]
+[ext_resource type="Texture2D" uid="uid://c8lwqdgakhmym" path="res://app/models/animated_sprite/texture.png" id="2_fnspp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtnc2"]
+atlas = ExtResource("2_fnspp")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fnspp")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/albedo_texture = SubResource("AtlasTexture_wtnc2")
+shader_parameter/alpha_scissor = 0.1
+shader_parameter/texture_lod_halve_distance_override = 16.0
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_scroll_speed = Vector2(0, 0)
+shader_parameter/billboard_mode = 1
+shader_parameter/use_transform_scale = true
+shader_parameter/cull_distance_override = 0.0
+shader_parameter/convert_vertex_colors = false
