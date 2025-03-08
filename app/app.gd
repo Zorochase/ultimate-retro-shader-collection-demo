@@ -3,8 +3,6 @@ extends Node
 const REFERENCE_RESOLUTION = Vector2i(640, 360)
 const DESKTOP_MAX_WINDOW_SCALE = 6
 
-const COLLECTION_VERSION = "1.4.0"
-
 static var DEMO_APP_VERSION = ProjectSettings.get_setting("application/config/version")
 static var IS_WEB_VERSION = OS.has_feature("web")
 
@@ -249,10 +247,10 @@ var _fade_overlay: FadeOverlay = $FadeOverlay
 func _ready() -> void:
 	_window.min_size = REFERENCE_RESOLUTION
 	_window.msaa_3d = Viewport.MSAA_DISABLED
-	_window.title = "Ultimate Retro Shader Collection Demo (v%s)" % DEMO_APP_VERSION
+	var title = "Ultimate Retro Shader Collection v%s Demo" % DEMO_APP_VERSION
+	_window.title = title
+	_title_label.text = title
 	_fullscreen = true
-
-	_title_label.text %= [DEMO_APP_VERSION, COLLECTION_VERSION]
 
 	_menu_visibility_indicator.visible = not IS_WEB_VERSION
 	_fullscreen_button.visible = not IS_WEB_VERSION
