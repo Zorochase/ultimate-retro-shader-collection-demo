@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://deei65q1p505h"]
 
-[ext_resource type="Shader" path="res://shaders/ursc/spatial/shiny_opaque.gdshader" id="1_wwqjc"]
+[ext_resource type="Shader" uid="uid://cpiqoa2as8nmt" path="res://shaders/ursc/spatial/shiny/shiny_opaque.gdshader" id="1_wwqjc"]
 
 [resource]
 render_priority = 0

@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bej0gfc0r47wc" path="res://app/models/cube/cube.obj" id="1_6gtyf"]
 [ext_resource type="Material" uid="uid://dx1ra7gom8q3s" path="res://app/models/cube/material.tres" id="2_p3y3n"]
 [ext_resource type="Script" uid="uid://utv81xd2dg7t" path="res://app/animated_sample.gd" id="3_fk2ij"]
-[ext_resource type="Shader" uid="uid://sllfdyjci7ab" path="res://shaders/ursc/spatial/basic_transparent.gdshader" id="3_s5my4"]
+[ext_resource type="Shader" uid="uid://sllfdyjci7ab" path="res://shaders/ursc/spatial/basic/basic_transparent.gdshader" id="3_s5my4"]
 
 [sub_resource type="Animation" id="Animation_rtlu3"]
 length = 0.001

@@ -1,3 +1,7 @@
+// If you want to use fog controlled by a Godot Environment resource (pixel-based),
+// simply uncomment the following line:
+// #define USE_ENVIRONMENT_FOG
+
 // Render mode
 render_mode
 
@@ -58,6 +62,12 @@ shadows_disabled;
 	global uniform int vertex_snap_intensity;
 #endif
 
+#if !defined(FOG_DISABLED) && !defined(USE_ENVIRONMENT_FOG)
+	global uniform vec4 fog_color : source_color;
+	global uniform float fog_start_distance;
+	global uniform float fog_end_distance;
+#endif
+
 global uniform float cull_distance;
 
 
@@ -105,6 +115,8 @@ global uniform float cull_distance;
 
 uniform float cull_distance_override: hint_range(0.0, 1024.0, 2.0) = 0;
 
+uniform bool convert_vertex_colors = false;
+
 
 // Varyings
 #if !defined(TEXTURE_DISABLED) && !defined(TEXTURE_METAL) && !defined(SHINY)
@@ -113,6 +125,10 @@ uniform float cull_distance_override: hint_range(0.0, 1024.0, 2.0) = 0;
 
 #if !defined(TEXTURE_DISABLED) && !defined(SHINY)
 	varying flat int should_halve_texture_lod;
+#endif
+
+#if !defined(FOG_DISABLED) && !defined(USE_ENVIRONMENT_FOG)
+	varying float fog_mix_factor;
 #endif
 
 // Functions
@@ -171,8 +187,31 @@ uniform float cull_distance_override: hint_range(0.0, 1024.0, 2.0) = 0;
 	}
 #endif
 
+// https://gamedev.stackexchange.com/a/194038
+vec3 fromLinear(vec3 linear_color)
+{
+	bvec3 cutoff = lessThan(linear_color.rgb, vec3(0.0031308));
+	vec3 higher = vec3(1.055) * pow(linear_color.rgb, vec3(1.0 / 2.4)) - vec3(0.055);
+	vec3 lower = linear_color.rgb * vec3(12.92);
+
+	return mix(higher, lower, cutoff);
+}
+
+// https://gamedev.stackexchange.com/a/194038
+vec3 toLinear(vec3 srgb_color)
+{
+	bvec3 cutoff = lessThan(srgb_color.rgb, vec3(0.04045));
+	vec3 higher = pow((srgb_color.rgb + vec3(0.055)) / vec3(1.055), vec3(2.4));
+	vec3 lower = srgb_color.rgb / vec3(12.92);
+
+	return mix(higher, lower, cutoff);
+}
+
 void vertex()
 {
+	if (convert_vertex_colors)
+		COLOR.rgb = fromLinear(COLOR.rgb);
+
 	#if !defined(TEXTURE_DISABLED) && !defined(TEXTURE_METAL) && !defined(SHINY)
 		UV = UV * uv_scale + uv_offset + (uv_scroll_speed * TIME);
 	#endif
@@ -211,6 +250,19 @@ void vertex()
 	#endif
 
 	float vertex_distance = length((MODELVIEW_MATRIX * vec4(VERTEX, 1.0)));
+
+	#if !defined(FOG_DISABLED) && !defined(USE_ENVIRONMENT_FOG)
+		if (fog_start_distance >= 0.0 && fog_start_distance < fog_end_distance)
+		{
+			fog_mix_factor = clamp(
+				(vertex_distance - fog_start_distance) / (fog_end_distance - fog_start_distance),
+				0.0, 1.0);
+		}
+		else
+		{
+			fog_mix_factor = 0.0;
+		}
+	#endif
 
 	#if !defined(TEXTURE_DISABLED) && !defined(SHINY)
 		float actual_texture_lod_halve_distance =
@@ -362,5 +414,10 @@ void fragment()
 				#endif
 			#endif
 		#endif
+	#endif
+
+	#if !defined(FOG_DISABLED) && !defined(USE_ENVIRONMENT_FOG)
+		FOG.a = fog_mix_factor;
+		FOG.rgb = toLinear(fog_color.rgb);
 	#endif
 }

@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://d0lmbh23sfivw"]
 
-[ext_resource type="Shader" path="res://shaders/ursc/spatial/standard_opaque.gdshader" id="1_gbvap"]
+[ext_resource type="Shader" uid="uid://7wsqj3le14ny" path="res://shaders/ursc/spatial/standard/standard_opaque.gdshader" id="1_gbvap"]
 [ext_resource type="Texture2D" uid="uid://6kho5l1okpur" path="res://app/models/floor/texture.png" id="2_t13t5"]
 
 [resource]

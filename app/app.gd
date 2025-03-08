@@ -3,7 +3,7 @@ extends Node
 const REFERENCE_RESOLUTION = Vector2i(640, 360)
 const DESKTOP_MAX_WINDOW_SCALE = 6
 
-const COLLECTION_VERSION = "1.2.0"
+const COLLECTION_VERSION = "1.4.0"
 
 static var DEMO_APP_VERSION = ProjectSettings.get_setting("application/config/version")
 static var IS_WEB_VERSION = OS.has_feature("web")

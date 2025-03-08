@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dx1ra7gom8q3s"]
 
-[ext_resource type="Shader" uid="uid://7wsqj3le14ny" path="res://shaders/ursc/spatial/standard_opaque.gdshader" id="1_dc8c1"]
+[ext_resource type="Shader" uid="uid://7wsqj3le14ny" path="res://shaders/ursc/spatial/standard/standard_opaque.gdshader" id="1_dc8c1"]
 [ext_resource type="Texture2D" uid="uid://daud6165gjdxh" path="res://app/models/cube/texture.png" id="2_7kdk8"]
 
 [resource]
@@ -15,3 +15,4 @@ shader_parameter/uv_offset = Vector2(0, 0)
 shader_parameter/uv_scale = Vector2(1, 1)
 shader_parameter/uv_scroll_speed = Vector2(0, 0)
 shader_parameter/cull_distance_override = 0.0
+shader_parameter/convert_vertex_colors = false

@@ -24,3 +24,4 @@ shader_parameter/uv_scroll_speed = Vector2(0, 0)
 shader_parameter/billboard_mode = 1
 shader_parameter/use_transform_scale = true
 shader_parameter/cull_distance_override = 0.0
+shader_parameter/convert_vertex_colors = false
